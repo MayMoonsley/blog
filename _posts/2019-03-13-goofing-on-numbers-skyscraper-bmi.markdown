@@ -59,7 +59,7 @@ The [Empire State Building](https://en.wikipedia.org/wiki/Empire_State_Building)
 
 
 
-This wasn't a particularly productive exercise. That's alright - nobody can be all business all the time. That's why they invented the mullet, after all. Still, it was kind of fun to dig into what this statistic represents in a physical sense. (The units themselves imply something interesting - kg/m2 seems like a ratio between mass and surface area, or the density of [Flatlanders](https://en.wikipedia.org/wiki/Flatland).)
+This wasn't a particularly productive exercise. That's alright - nobody can be all business all the time. That's why they invented the mullet, after all. Still, it was kind of fun to dig into what this statistic represents in a physical sense. (The units themselves imply something interesting - $$ \frac{kg}{m^2} $$ seems like a ratio between mass and surface area, or the density of [Flatlanders](https://en.wikipedia.org/wiki/Flatland).)
 
 
 
@@ -68,6 +68,3 @@ This wasn't a particularly productive exercise. That's alright - nobody can be a
 
 
 While we've had some fun here, the real moral of the story is this: if you shake equations hard enough, sometimes you can get the sentence "the Eiffel Tower is morbidly obese" to fall out, and that's a good enough reason to mess around with math.
-
-
-

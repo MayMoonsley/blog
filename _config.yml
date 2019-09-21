@@ -21,7 +21,7 @@
 title: May Like The Month
 email: may@maycod.es
 description: >- # this means to ignore newlines until "baseurl:"
-  May Lawver's blog. This whole description is a work in progress for now...
+  May's blog about math, music, programming, etc.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: MayMoonsley
