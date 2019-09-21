@@ -1,0 +1,18 @@
+---
+author: mlawver
+comments: true
+date: 2018-09-15 17:06:51+00:00
+layout: post
+slug: viable
+title: In All Honesty, I Don't Know Why I Thought The Other Workflow Was Really That
+  Viable
+wordpress_id: 10
+categories:
+- Site Miscellany
+---
+
+Welcome to the new blog! After years away from WordPress, I've finally come back to it. It's just so much _easier_; I'm a college student now, and messing around with my FTP stuff whenever I want to post to my blog is a bit much. I've got classes to go to!
+
+I'm leaving [the old blog](http://maycod.es/blog/index.html) up for posterity's sake. (The post on why I abandoned WordPress for static HTML didn't age well, did it? I almost wish I had finished it, just so I could know what I was thinking back then.)
+
+This post is just an announcement - "Hey guys, I'm still here!" - so I don't have anything else to say. Expect more here in the future - I'm working on a couple things right now, so I'm sure I'll end up having _something_ to talk about.
