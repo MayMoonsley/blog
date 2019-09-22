@@ -1,5 +1,5 @@
 ---
-author: mlawver
+author: May Lawver
 comments: true
 date: 2018-11-03 16:00:34+00:00
 layout: post
