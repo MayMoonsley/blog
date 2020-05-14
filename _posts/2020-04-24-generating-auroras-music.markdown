@@ -7,13 +7,13 @@ title: Generating Aurora's Music
 
 [Aurora](https://github.com/GRarer/Aurora) is a game my friend Grace led for VGDev about managing a space colony. You play as the Aurora colony's AI overseer, and your mission is to research the local alien ruins and unlock their secrets. Check it out! I think it's tons of fun. My main contribution to Aurora was the code that generates its music. The game's open source, so you can [look at the music code](https://github.com/GRarer/Aurora/tree/master/src/music) if you'd like. If you'd prefer a written explanation of what it does, read on; this post will explain how Aurora's music generation works.
 
-# Rhythm
+## Rhythm
 
 The first step is selecting a time signature. A time signature says how many beats there are in a measure and how they're split up. For example, 4/4 means each measure is four quarter notes, while 7/8 means each measure is seven eighth notes. An important thing to keep in mind is that time signatures can't quite be simplified the way fractions can; 3/4 and 6/8 sound similar but are still very different beasts.
 
 At the start of each new section of music, a new time signature is chosen. It's always either 5/8, 6/8, 7/8, 8/8, 9/8, 11/8, or 13/8. Most of these are pretty unusual&mdash;almost every song you'll hear on the radio is in 4/4, for example. This is a game about an alien world, so it's only natural the music would favor time signatures you don't typically hear in pop music. (It helps that I'm a big fan of odd time signatures.)
 
-# Drums
+## Drums
 
 Once we've determined how many eighth notes there are in a measure, we can go about splitting them up into groups of two and three. I think I got this idea from [an Andrew Huang video about odd time signatures](https://www.youtube.com/watch?v=JQk-1IXRfew). The idea is that the smaller groupings make the whole more intelligible for both the musicians playing the music and the people listening to it. It's easier to count 3 + 3 + 3 + 2 + 2 than it is to count 13.
 
@@ -43,7 +43,7 @@ This algorithm has a chance of producing a grouping with a trailing group of one
 
 These groupings make generating an acceptable drum groove pretty easy. The measure has been split up into smaller groups, and these groups can be considered more or less independently. A kick or snare plays on the first beat of each grouping; hi-hats play on the rest. Groups alternate between starting with kicks and starting with snares to create a sort of pseudo-[backbeat](https://en.wikipedia.org/wiki/Beat_(music)#Backbeat) feel.
 
-# Scales and Chords
+## Scales and Chords
 
 The harmony is only marginally more complicated than the rhythm section. Musical scales are stored as bit vectors using the method described in Ian Ring's [A Study of Scales](https://ianring.com/musictheory/scales/). This representation has a lot of nice properties. For example, checking if a scale `S` has a note `n` semitones above the root is as simple as `S & (1 << n) != 0`. Aurora has a lot of similar utility methods for manipulating and analyzing scales, actually. Figuring out the right way to express some musical property in terms of these bit vectors is a fun mental exercise even if most of the resulting utility methods don't get used.
 
@@ -66,6 +66,6 @@ The four chord loop plays twice accompanied by the drums, then the drums play on
 
 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/806262013&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maymoonsley" title="May Lawver" target="_blank" style="color: #cccccc; text-decoration: none;">May Lawver</a> · <a href="https://soundcloud.com/maymoonsley/aurora-soundtrack" title="Aurora Soundtrack" target="_blank" style="color: #cccccc; text-decoration: none;">Aurora Soundtrack</a></div>
 
-# Conclusion
+## Conclusion
 
 I'm proud of how this all turned out, but there are a lot of things like melody generation and more complicated synths that I hoped to implement but didn't get around to. If I were to start over with this project, I'd probably use a library like [Tone.js](https://tonejs.github.io/) to handle the sound synthesis. Letting a library handle that would allow me to focus on the musical side of things more. Still, I learned a lot working on this, and it's left me with a lot of ideas for my next foray into generative audio. It was a learning experience and sounds pretty nice, and that's all I can really ask for.

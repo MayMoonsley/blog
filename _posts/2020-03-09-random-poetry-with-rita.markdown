@@ -7,13 +7,13 @@ title: Random Poetry With RiTa
 
 Last semester I wrote a Node program to randomly generate sonnets.
 
-# What's a Sonnet?
+## What's a Sonnet?
 
 A [sonnet](https://en.wikipedia.org/wiki/Sonnet) is a kind of poem written in iambic pentameter with one of a couple different rhyme schemes. Iambic pentameter is a fancy way of saying "ten syllables with alternating stress." The pattern is unstressed, stressed, repeat. An example of this is the line "But, soft! what light through yonder window breaks?" from _Romeo and Juliet_.
 
 I'll be using `0` to represent unstressed syllables and `1` to represent stressed syllables. For example, *puppetry* has stress pattern `1/0/0`.
 
-# How Can We Generate One?
+## How Can We Generate One?
 
 In order to randomly generate sonnets, I used two libraries: 
 
@@ -69,7 +69,7 @@ Of course, since our sonnet doesn't rhyme, it's not really a sonnet. It has the 
 
 Most of this is complete nonsense, which is to be expected. Still, one line stood out to me: _Undried repriming windless toxin drole._ It evokes such strong imagery; when I read it I imagine a stagnant pool of water surrounded by sickly-sweet vapor. However, there are a lot of really obscure words throughout the poem. You basically have to have the dictionary open in another tab if you want to understand it, which is less than ideal.
 
-# How Can We Simplify Our Lexicon?
+## How Can We Simplify Our Lexicon?
 
 I thought of a couple things to do to solve this problem, but what I decided on was pulling words from some given source text instead of from the entire dictionary. This keeps the poems relatively constrained in terms of vocabulary. [Project Gutenberg](https://www.gutenberg.org/) makes it easy to find large source texts; with some minor cleaning, _Pride and Prejudice_ was ready to process. Getting all the words out of the text was fairly simple, though I had to make sure not to include stuff like numbers.
 
@@ -109,7 +109,7 @@ I don't know how the W snuck in there. (In case you'd like to read this poem alo
 
 Still, this isn't really coherent. We can read meaning into some lines through a sort of linguistic [pareidolia](https://en.wikipedia.org/wiki/Pareidolia), but a lot of the time that's pretty difficult. This algorithm could theoretically produce something stunning (remember that line about toxins?) but it also produces a lot of junk. [This excellent article](http://www.possibilityspace.org/tutorial-generative-possibility-space/index.html) talks more about this idea; basically, forcing the poetry generator to be more coherent reduces the number of poems it could possibly produce. This is the point of it, of course. With that in mind...
 
-# How Can We Make This Poetry More Coherent?
+## How Can We Make This Poetry More Coherent?
 
 This is a difficult question to answer since there are so many ways to answer it. Markov chains? Neural networks? Just leaving the generator as is and calling the incoherence a feature? These are all valid approaches, but the one I chose here was simple:
 
@@ -151,6 +151,6 @@ Here's the result of this experiment:
 
 The individual lines here make more sense than previous poems for obvious reasons. In my opinion, this makes the work as a whole worse, almost as if it's fallen into a poetic [uncanny valley](https://en.wikipedia.org/wiki/Uncanny_valley). It's harder to see meaning in the connections between random lines than it is to see meaning in a single nonsensical line, at least for me. There's almost a link between the first two lines if you imagine them setting the scene, but the rest of the sonnet doesn't really fit together. The turn also isn't super obvious. Still, weird techniques like this are useful to play around with even if they don't end up working well&mdash;you never know when they could come in handy.
 
-# What Next?
+## What Next?
 
 My first goal with these experiments was to have fun, and I'm proud to say that I accomplished that. They were also pretty good practice for [NaNoGenMo](https://nanogenmo.github.io/). (NaNoGenMo is still eight months out as I write this, but it's good to be prepared.) With that in mind, an obvious next step is to make the sonnets rhyme. I have a lot of other ideas for where to go from here, too. Expect more generative poetry in the future. If nothing else, these techniques produce excellent idea fodder, and that's a good enough reason to continue with them.
