@@ -12,7 +12,7 @@ It was originally inspired by looking at retro game compilations by Atari, Sega,
 itch because they were kind of embarrassing and unprofessional, but they were games I was proud of then and am still kind of proud of
 now. It'd also be a way to release some unreleased games, and it'd also be a good way to learn how to use [Electron](https://www.electronjs.org/). Two years of on-and-off work later, and it's finally ready to release.
 
-Note that I didn't say it was _done._ That's not really accurate I'm sure that future hard drive spelunking will turn
+Note that I didn't say it was _done._ That's not really accurate. I'm sure that future hard drive spelunking will turn
 up new things to put in the museum. I know for a fact that there are three or so games that could easily be slotted in, and a handful more that could be inserted with some porting. (The museum's main menu could use some sprucing up, too, but that's less important.) Still, I'm happy calling this 1.0 and moving on to other projects for now.
 
 I haven't used the name Finis Quartus Luna in a couple years, but it was my main identity online for a while. This museum is
